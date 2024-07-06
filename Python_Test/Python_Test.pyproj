@@ -4,13 +4,16 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>bc14425a-6ded-4aea-adea-6a40737931ba</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Python_Test.py</StartupFile>
+    <StartupFile>test.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Python_Test</Name>
     <RootNamespace>Python_Test</RootNamespace>
+    <TestFramework>Pytest</TestFramework>
+    <InterpreterId>
+    </InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +24,31 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="backup.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Connect_Sandbox_instance.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="incremental_backup.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mysql_manager.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Python_Test.py" />
+    <Compile Include="sandbox_linking.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server_manager.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
