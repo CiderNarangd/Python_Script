@@ -4,7 +4,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>bc14425a-6ded-4aea-adea-6a40737931ba</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>test.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -41,9 +42,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="server_manager.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="test.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
