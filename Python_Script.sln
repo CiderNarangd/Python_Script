@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Python_Test", "Python_Test\Python_Test.pyproj", "{BC14425A-6DED-4AEA-ADEA-6A40737931BA}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Python_Script", "Python_Test\Python_Script.pyproj", "{BC14425A-6DED-4AEA-ADEA-6A40737931BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
