@@ -17,6 +17,8 @@ import subprocess
 slave_user = 'root'
 slave_host = '211.184.32.82'
 
+backup_host = '221.163.171.138'
+
 backup_user = 'kinam'
 
 backup_date = datetime.now()
@@ -68,11 +70,7 @@ process = subprocess.Popen(send_slave_cmd, stdout=subprocess.PIPE, stderr=subpro
 stdout, stderr = process.communicate()
 
 ##send backup db server..
-## 백업디비로 보낼떈 호스트디렉토리 만들어놓기.
+send_backup_cmd = f'sudo scp -r {basedir}{backup_date_str} {slave_user}@{backup_host}:{basedir}'
 
-#sudo xtrabackup --defaults-file=/etc/my.cnf --user=xtrabackup --password='12345' --target-dir=/db/mysqlbackup/240516 --backup --no-lock 
-#sudo xtrabackup --prepare --target-dir=/db/mysqlbackup/240516 ##apply-log 적용
-
-#chown -R mysql:mysql /db/mysqlbackup/240515/*
-#sudo chmod -R 777 /db/mysqlbackup/240515
-#scp -r /db/mysqlbackup/240515 kinam@211.184.32.82:/db/mysqlbackup/
+process = subprocess.Popen(send_backup_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+stdout, stderr = process.communicate()
